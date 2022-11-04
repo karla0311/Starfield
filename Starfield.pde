@@ -1,12 +1,9 @@
-Heart tim, cherry;
 Heart [] hearts = new Heart[155];
 int x = 150;
 
 void setup()
 {
   size(500,500);
-  tim = new Heart();
-  cherry = new Heart();
   for(int i = 0; i < hearts.length; i++){
     hearts[i] = new Heart(255,(int)(Math.random()*256),(int)(Math.random()*500),(int)(Math.random()*500));
   }
@@ -17,10 +14,6 @@ void setup()
 void draw()
 {
   background(#9acafc);
-  tim.show();
-  tim.walk();
-  cherry.show();
-  cherry.walk();
   for(int i = 0; i < hearts.length; i++){
     hearts[i].walk();
     hearts[i].show();
